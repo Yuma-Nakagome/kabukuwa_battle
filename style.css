@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+
+.battlefield {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+
+.insect-box {
+  width: 45%; /* スマホでも2つ並ぶように調整 */
+  min-width: 150px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .insect-box {
+    width: 90%;
+  }
+}
+
+
+
+.insect-img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.insect-name {
+  font-weight: bold;
+  white-space: pre-line;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.hp-bar {
+  width: 180px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hp-green {
+  background-color: #4caf50;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.hp-red {
+  background-color: #f44336;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition: width 0.3s;
+}
+
+.rps-section {
+  margin-top: 30px;
+}
+
+#specialMoveText {
+  font-size: 1.5rem;
+  color: gold;
+  font-weight: bold;
+  animation: specialEffect 0.8s ease-out;
+}
+
+@keyframes specialEffect {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.battle-start {
+  margin-top: 20px;
+}
