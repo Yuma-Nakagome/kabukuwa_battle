@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ムシキング風バトル</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>カブクワバトル!最強は誰だ!</h1>
+
+  <!-- ガチャ -->
+  <div class="gacha-section">
+    <button id="gachaButton" onclick="pullGacha()">ガチャを引く</button>
+    <p id="gacha-result"></p>
+  </div>
+
+  <!-- バトルスタート -->
+  <div class="battle-start">
+    <button id="startBattleBtn" onclick="startBattle()" style="display:none;">バトルスタート</button>
+  </div>
+
+  <!-- バトルフィールド -->
+  <div class="battlefield">
+    <div class="insect-box">
+      <img id="playerImage" class="insect-img" />
+      <div id="playerName" class="insect-name"></div>
+      <div class="hp-bar">
+        <div id="playerHP" class="hp-green"></div>
+        <div id="playerDamage" class="hp-red"></div>
+      </div>
+    </div>
+
+    <div class="insect-box">
+      <img id="cpuImage" class="insect-img" />
+      <div id="cpuName" class="insect-name"></div>
+      <div class="hp-bar">
+        <div id="cpuHP" class="hp-green"></div>
+        <div id="cpuDamage" class="hp-red"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- じゃんけん -->
+  <div class="rps-section">
+    <button onclick="playGame('rock')">グー ✊</button>
+    <button onclick="playGame('scissors')">チョキ ✌️</button>
+    <button onclick="playGame('paper')">パー ✋</button>
+  </div>
+
+  <!-- 結果 -->
+  <p id="specialMoveText"></p>
+  <p id="result"></p>
+
+  <!-- ナビゲーション -->
+  <div class="nav-buttons">
+    <button id="resetBtn" onclick="location.reload()" style="display:inline-block;">ホームに戻る</button>
+    <button id="nextBattleBtn" onclick="nextBattle()" style="display:none;">強い敵と戦う</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
